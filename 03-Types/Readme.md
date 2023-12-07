@@ -13,3 +13,7 @@ instead of this:
     let myNumber: number = 123456
 ```
 Here TypeScript will automatically use type inference and understand it that this is actually a number that the user is trying to define.
+
+**Never Use Any in TypeScript**
+Any is a special type that you can use whenever you don't want a particular value to cause typechecking errors.
+As we used `let marvel;`, it directly got assigned as `any` variable. You will get a better understanding in the code written. 
