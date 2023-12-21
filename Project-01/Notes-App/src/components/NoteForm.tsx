@@ -12,7 +12,7 @@ type NoteFormProps = {
     availableTags: Tag[]
 } & Partial<NoteData>
 
-const NoteForm = ({ onSubmit, onAddTag, availableTags, title = "", markdown = "", tags = [] }: NoteFormProps) => {
+const NoteForm = ({ onSubmit, onAddTag, availableTags, title = "", markdown = "" }: NoteFormProps) => {
     const titleRef = useRef<HTMLInputElement>(null);
     const markDownRef = useRef<HTMLTextAreaElement>(null);
     const [selectedTags, setSelectedTags] = useState<Tag[]>([]);
