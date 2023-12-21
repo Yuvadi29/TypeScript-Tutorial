@@ -1,4 +1,3 @@
-import React from 'react';
 import NoteForm from './NoteForm';
 import { NoteData, Tag } from '../App';
 import { useNote } from './NoteLayout';
