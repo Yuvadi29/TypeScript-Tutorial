@@ -37,10 +37,11 @@ export const fetchQuestions = async (amount: number, difficulty: Difficulty) => 
 
         return data.results.map((question: Question) => ({
             ...question,
-            answers: ShuffleArray([
-                ...question.incorrect_answers,
-                question.correct_answer
-            ]),
+            // answers: ShuffleArray([
+            //     ...question.incorrect_answers,
+            //     question.correct_answer
+            // ]),
+            answers: [...question.incorrect_answers, question.correct_answer],
         }));
     } catch (error) {
         console.error("Error fetching questions:", error);
