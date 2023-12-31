@@ -6,7 +6,7 @@
 
 <h2>🚀 Demo</h2>
 
-[https://typescript-project1-notes-app.vercel.app/](https://typescript-project1-notes-app.vercel.app/)
+[https://typescript-project1-notes-app.vercel.app/](https://typescript-pro1-notes-app.vercel.app/)
 
   
   

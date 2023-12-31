@@ -1,30 +1,54 @@
-# React + TypeScript + Vite
+<h1 align="center" id="title">Hangman Game</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center"><img src="https://socialify.git.ci/Yuvadi29/TypeScript-Tutorial/image?language=1&amp;name=1&amp;owner=1&amp;stargazers=1&amp;theme=Dark" alt="project-image"></p>
 
-Currently, two official plugins are available:
+<p id="description">This is a Hangman Game where in we have to guess a word from the given blank spaces and the letters. If the letter guessed is right you can move to the next one else the hangman's body will start to appear. If you see the whole body means you are out.</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h2>🚀 Demo</h2>
 
-## Expanding the ESLint configuration
+[https://typescript-pro3-hangman.vercel.app/](https://typescript-pro3-hangman.vercel.app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+  
+  
+<h2>🧐 Features</h2>
 
-- Configure the top-level `parserOptions` property like this:
+Here're some of the project's best features:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+*   Virtual Keyboard
+*   Keyboard Support
+
+<h2>🛠️ Installation Steps:</h2>
+
+<p>1. Clone the Repository</p>
+
+```
+https://github.com/Yuvadi29/TypeScript-Tutorial.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<p>2. Go into the folder</p>
+
+```
+cd Project-03/Hangman
+```
+
+<p>3. Install the dependencies</p>
+
+```
+npm install
+```
+
+<p>4. Start the project</p>
+
+```
+npm run dev
+```
+
+  
+  
+<h2>💻 Built with</h2>
+
+Technologies used in the project:
+
+*   ReactJS
+*   CSS
+*   TypeScript
