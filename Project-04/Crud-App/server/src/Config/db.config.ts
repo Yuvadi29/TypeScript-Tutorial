@@ -4,10 +4,6 @@ import mongoose from "mongoose";
 
 dotenv.config();
 
-const dbName = 'Post';
-
-const mongoURL = `process.env.MONGO_URL${dbName}`;
-
 const options = {
     autoIndex: false,
     maxPoolSize: 10,
@@ -16,11 +12,17 @@ const options = {
     family: 4
 };
 
+const mongoURL = process.env.MONGO_URL;
+
+if (!mongoURL) {
+    console.error("MongoDB connection string is not defined in the environment variables.");
+    process.exit(1); // Exit the process or handle the error appropriately
+}
+
 export const db = mongoose.connect(mongoURL, options)
-    .then(res => {
-        if (res) {
-            console.log(`Connected to Db Successfully to ${dbName}`);
-        }
-    }).catch(err => {
-        console.log(err);
+    .then(() => {
+        console.log(`Connected to Db Successfully`);
     })
+    .catch(err => {
+        console.error(err);
+    });
