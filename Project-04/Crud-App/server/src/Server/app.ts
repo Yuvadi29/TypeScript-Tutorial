@@ -1,8 +1,10 @@
 import express from "express";
 import { db } from "../Config/db.config";
 import { router } from '../Routes/posts.routes';
+import cors from 'cors';
 
 const app = express();
+app.use(cors());
 
 // Middlewares
 app.use(express.json());
