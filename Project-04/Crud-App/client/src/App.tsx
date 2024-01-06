@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent, FormEvent, useEffect } from 'react';
 import './App.css';
+import axios from 'axios';
 
 interface FormData {
   title: string;
@@ -37,25 +38,21 @@ const MyForm: React.FC = () => {
   };
 
 
-  const handleSubmit: FormEventHandler = (e) => {
+  const handleSubmit: FormEventHandler = async (e) => {
     e.preventDefault();
 
     const apiURL = 'http://localhost:7070/api/posts';
 
-    fetch(apiURL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log('API Response: ', data);
-      })
-      .catch((error) => {
-        console.log('Error: ', error);
-      });
+    try {
+      await axios.post(apiURL, formData);
+      console.log('Data Saved to DB');
+      alert("Data Saved");
+    } catch (error) {
+      console.error('Error:', error);
+      // Log the response to see the actual content
+      alert("Error saving data");
+    }
+
   };
 
   const [posts, setPosts] = useState<any[]>([]);
